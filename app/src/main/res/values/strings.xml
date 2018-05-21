@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ARA Sound Classifier</string>
+    <string name="description_for_sounds">Description for sounds</string>
+    <string name="new_sound_information">More Information in real time for sounds</string>
+</resources>

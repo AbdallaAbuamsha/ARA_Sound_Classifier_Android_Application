@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.abdalla.graduationporjecttemplate.MainActivity">
+
+    <TextView
+        android:id="@+id/tv_description_of_sounds"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="@string/description_for_sounds"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/cornerd_rectangle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_description_of_sounds" />
+
+
+    <ImageView
+        android:id="@+id/iv_sound_img_cicle"
+        android:layout_width="142dp"
+        android:layout_height="142dp"
+        android:layout_marginEnd="8dp"
+
+        android:layout_marginStart="8dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/circle" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/editText2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/left_side_cornerd_rectangle" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/uncornerd_rectangle" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/right_side_cornerd_rectangle" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginStart="32dp"
+        android:background="@drawable/edit_text_style"
+        android:hint="@string/new_sound_information"
+        android:inputType="textPersonName"
+        android:paddingLeft="32dp"
+        android:textColor="@color/colorAccentDark"
+        android:textColorHint="@color/colorAccentDark"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="66dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toStartOf="@+id/iv_sound_img_cicle"
+            app:layout_constraintStart_toEndOf="@+id/iv_sound_img_cicle"
+            app:layout_constraintTop_toBottomOf="@+id/iv_sound_img_cicle"
+            android:rotation="1"
+            app:srcCompat="@drawable/ic_bottom" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="66dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintBottom_toTopOf="@+id/iv_sound_img_cicle"
+            app:layout_constraintEnd_toStartOf="@+id/iv_sound_img_cicle"
+            app:layout_constraintStart_toEndOf="@+id/iv_sound_img_cicle"
+            app:srcCompat="@drawable/ic_top" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="20dp"
+            android:layout_height="66dp"
+            android:layout_marginRight="12dp"
+            android:rotation="4"
+            app:layout_constraintBottom_toTopOf="@+id/iv_sound_img_cicle"
+            app:layout_constraintEnd_toStartOf="@+id/iv_sound_img_cicle"
+            app:layout_constraintTop_toBottomOf="@+id/iv_sound_img_cicle"
+            app:srcCompat="@drawable/ic_left" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="20dp"
+            android:layout_height="66dp"
+            android:layout_marginLeft="12dp"
+            app:layout_constraintBottom_toTopOf="@+id/iv_sound_img_cicle"
+            app:layout_constraintStart_toEndOf="@+id/iv_sound_img_cicle"
+            app:layout_constraintTop_toBottomOf="@+id/iv_sound_img_cicle"
+            app:srcCompat="@drawable/ic_right" />
+
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:rotation="3"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/iv_sound_img_cicle"
+        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintStart_toStartOf="@+id/imageView9"
+        app:layout_constraintTop_toTopOf="@+id/iv_sound_img_cicle"
+        app:layout_constraintVertical_bias="0.9"
+        app:srcCompat="@drawable/ic_bottom_left" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_sound_img_cicle"
+        app:layout_constraintEnd_toEndOf="@+id/iv_sound_img_cicle"
+        app:layout_constraintHorizontal_bias="0.105"
+        app:layout_constraintStart_toStartOf="@+id/imageView9"
+        app:layout_constraintTop_toTopOf="@+id/imageView8"
+        app:layout_constraintVertical_bias="0.105"
+        app:srcCompat="@drawable/ic_top_left" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_sound_img_cicle"
+        app:layout_constraintEnd_toEndOf="@+id/imageView10"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="@+id/iv_sound_img_cicle"
+        app:layout_constraintTop_toTopOf="@+id/imageView8"
+        app:layout_constraintVertical_bias="0.1"
+        app:srcCompat="@drawable/ic_top_right" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:rotation="1"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/imageView10"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="@+id/iv_sound_img_cicle"
+        app:layout_constraintTop_toTopOf="@+id/iv_sound_img_cicle"
+        app:layout_constraintVertical_bias="0.9"
+        app:srcCompat="@drawable/ic_bottom_right" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editText2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editText2"
+        app:layout_constraintTop_toTopOf="@+id/editText2"
+        app:srcCompat="@drawable/circle_action_point" />
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/fab"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="end|bottom"-->
+        <!--android:layout_margin="16dp"-->
+        <!--android:layout_marginBottom="8dp"-->
+        <!--android:layout_marginEnd="32dp"-->
+        <!--android:src="@drawable/ic_top_right"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:backgroundTint="@color/colorPrimary"-->
+        <!--app:layout_constraintEnd_toEndOf="parent" />-->
+
+
+</android.support.constraint.ConstraintLayout>
