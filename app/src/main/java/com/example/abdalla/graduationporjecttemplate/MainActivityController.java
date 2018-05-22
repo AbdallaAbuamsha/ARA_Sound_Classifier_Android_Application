@@ -25,12 +25,9 @@ import org.json.JSONObject;
 import java.io.UnsupportedEncodingException;
 import java.util.concurrent.locks.ReentrantLock;
 
-/**
- * Created by Abdalla on 5/20/2018.
- */
 
 public class MainActivityController {
-    AppCompatActivity mainActivity;
+    private AppCompatActivity mainActivity;
 
     private static final String LOG_TAG = "MYLOG";
     private static int RESAULT_NUMBER = 0;
@@ -38,23 +35,25 @@ public class MainActivityController {
     private static final int SAMPLE_RATE = 16000;
     private static final int SAMPLE_DURATION_MS = 3000;
     private static final int RECORDING_LENGTH = (int) (SAMPLE_RATE * SAMPLE_DURATION_MS / 1000);
-    short[] recordingBuffer = new short[RECORDING_LENGTH];
+    private short[] recordingBuffer = new short[RECORDING_LENGTH];
 
     /****************** MultiThreading Parameters ********************************/
     private Thread recordingThread;
     private Thread recognitionThread;
-    boolean shouldContinue = true;
-    boolean shouldContinueRecognition = true;
+    private boolean shouldContinue = true;
+    private boolean shouldContinueRecognition = true;
     private final ReentrantLock recordingBufferLock = new ReentrantLock();
 
-    int recordingOffset = 0;
+    private int recordingOffset = 0;
 
 
     private static final int REQUEST_RECORD_AUDIO = 13;
 
-    MainActivityController(AppCompatActivity _mainActivity)
+    private AudioDataReceivedListener mListener;
+    MainActivityController(AppCompatActivity _mainActivity, AudioDataReceivedListener listener)
     {
         this.mainActivity = _mainActivity;
+        this.mListener = listener;
         requestMicrophonePermission();
         startRecording();
         startRecognition();
@@ -75,7 +74,7 @@ public class MainActivityController {
         }
     }
 
-    public synchronized void startRecording() {
+    private synchronized void startRecording() {
         if (recordingThread != null) {
             return;
         }
@@ -122,8 +121,11 @@ public class MainActivityController {
         Log.v(LOG_TAG, "Start recording");
 
         // Loop, gathering audio data and copying it to a round-robin buffer.
+        long shortsRead = 0;
         while (shouldContinue) {
             int numberRead = record.read(audioBuffer, 0, audioBuffer.length);
+            shortsRead += numberRead;
+            mListener.onAudioDataReceived(audioBuffer);
             int maxLength = recordingBuffer.length;
             int newRecordingOffset = recordingOffset + numberRead;
             int secondCopyLength = Math.max(0, newRecordingOffset - maxLength);
@@ -152,7 +154,7 @@ public class MainActivityController {
         recordingThread = null;
     }
 
-    public synchronized void startRecognition() {
+    private synchronized void startRecognition() {
         if (recognitionThread != null) {
             return;
         }
@@ -185,6 +187,7 @@ public class MainActivityController {
         int[] sampleRateList = new int[]{SAMPLE_RATE};
 
         // Loop, grabbing recorded data and running the recognition model on it.
+
         while (shouldContinueRecognition) {
             // The recording thread places data in this round-robin buffer, so lock to
             // make sure there's no writing happening and then copy it to our own
@@ -269,9 +272,9 @@ public class MainActivityController {
                     }
                 }
             };
-            requestQueue.add(stringRequest);
-            stopRecording();
-            stopRecognition();
+//            requestQueue.add(stringRequest);
+//            stopRecording();
+//            stopRecognition();
         }
 
         Log.v(LOG_TAG, "End recognition");
