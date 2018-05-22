@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "C:\\Users\\Abdalla\\Documents\\ARA_Sound_Classifier_Android_Application\\waveform\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\Abdalla\\gradle\\gradle-4.1\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.1.aar\\5a4e2e9c4f148939079717b1291d77ce\\res\\anim\\abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\Abdalla\\Documents\\ARA_Sound_Classifier_Android_Application\\waveform\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\Abdalla\\gradle\\gradle-4.1\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.1.aar\\5a4e2e9c4f148939079717b1291d77ce\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\Abdalla\\Documents\\ARA_Sound_Classifier_Android_Application\\waveform\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\Abdalla\\gradle\\gradle-4.1\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.1.aar\\5a4e2e9c4f148939079717b1291d77ce\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\Abdalla\\Documents\\ARA_Sound_Classifier_Android_Application\\waveform\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\Abdalla\\gradle\\gradle-4.1\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.1.aar\\5a4e2e9c4f148939079717b1291d77ce\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "C:\\Users\\Abdalla\\Documents\\ARA_Sound_Classifier_Android_Application\\waveform\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\Abdalla\\gradle\\gradle-4.1\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.1.aar\\5a4e2e9c4f148939079717b1291d77ce\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "C:\\Users\\Abdalla\\Documents\\ARA_Sound_Classifier_Android_Application\\waveform\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\Abdalla\\gradle\\gradle-4.1\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.1.aar\\5a4e2e9c4f148939079717b1291d77ce\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\Abdalla\\Documents\\ARA_Sound_Classifier_Android_Application\\waveform\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\Abdalla\\gradle\\gradle-4.1\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.1.aar\\5a4e2e9c4f148939079717b1291d77ce\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\Abdalla\\Documents\\ARA_Sound_Classifier_Android_Application\\waveform\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_popup_exit.xml",
+        "source": "C:\\Users\\Abdalla\\gradle\\gradle-4.1\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.1.aar\\5a4e2e9c4f148939079717b1291d77ce\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "C:\\Users\\Abdalla\\Documents\\ARA_Sound_Classifier_Android_Application\\waveform\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "C:\\Users\\Abdalla\\gradle\\gradle-4.1\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.1.aar\\5a4e2e9c4f148939079717b1291d77ce\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\Abdalla\\Documents\\ARA_Sound_Classifier_Android_Application\\waveform\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\Abdalla\\gradle\\gradle-4.1\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.1.aar\\5a4e2e9c4f148939079717b1291d77ce\\res\\anim\\abc_slide_in_top.xml"
+    }
+]

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="default_background">#000000</color>
+    <color name="default_playback_indicator">#ffff66</color>
+    <color name="default_timecode">#ddffffdd</color>
+    <color name="default_waveform">#eeeef0</color>
+    <color name="default_waveformFill">#80FFC0</color>
+    <declare-styleable name="WaveformView"><attr format="enum" name="mode">
+            <enum name="RECORDING" value="1"/>
+            <enum name="PLAYBACK" value="2"/>
+        </attr><attr format="float" name="waveformStrokeThickness"/><attr format="color" name="waveformColor"/><attr format="color" name="waveformFillColor"/><attr format="color" name="playbackIndicatorColor"/><attr format="color" name="timecodeColor"/></declare-styleable>
+    <string name="library_name">Waveform</string>
+</resources>
