@@ -1,39 +1,14 @@
 package com.example.abdalla.graduationporjecttemplate;
 
-import android.content.pm.PackageManager;
-import android.media.AudioFormat;
-import android.media.AudioRecord;
-import android.media.MediaRecorder;
-import android.support.v4.app.ActivityCompat;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import com.android.volley.AuthFailureError;
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.VolleyLog;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.UnsupportedEncodingException;
-import java.util.concurrent.locks.ReentrantLock;
+import com.newventuresoftware.waveform.WaveformView;
 
 public class MainActivity extends AppCompatActivity {
 
     /****************** UI Variables ********************************/
-    TextView tv_result;
-    TextView tv_recording;
-    TextView tv_recognize;
-
+    private WaveformView mRealtimeWaveformView;
     MainActivityController mainActivityController;
 
 
@@ -42,10 +17,39 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mainActivityController = new MainActivityController(this);
+        mRealtimeWaveformView = (WaveformView) findViewById(R.id.waveformView);
+        mainActivityController = new MainActivityController(this, new AudioDataReceivedListener() {
+            @Override
+            public void onAudioDataReceived(short[] data) {
+                mRealtimeWaveformView.setSamples(data);
+            }
+        });
 
-
+//        short[] samples = null;
+//        try {
+//            samples = getAudioSample();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
+
+//    private short[] getAudioSample() throws IOException{
+//        InputStream is = getResources().openRawResource(R.raw.jinglebells);
+//        byte[] data;
+//        try {
+//            data = IOUtils.toByteArray(is);
+//        } finally {
+//            if (is != null) {
+//                is.close();
+//            }
+//        }
+//
+//        ShortBuffer sb = ByteBuffer.wrap(data).order(ByteOrder.LITTLE_ENDIAN).asShortBuffer();
+//        short[] samples = new short[sb.limit()];
+//        sb.get(samples);
+//        return samples;
+//    }
+
 
 
 }
