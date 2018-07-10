@@ -29,11 +29,11 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-import app.R;
+import com.example.abdalla.graduationporjecttemplate.R;
 import app.Config;
 
 /**
- * Created by Ravi on 31/03/18.
+ * Created by Ravi on 31/03/15.
  */
 public class NotificationUtils {
 

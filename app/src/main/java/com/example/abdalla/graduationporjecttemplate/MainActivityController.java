@@ -9,18 +9,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.android.volley.AuthFailureError;
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.VolleyLog;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+
 
 import java.io.UnsupportedEncodingException;
 import java.util.concurrent.locks.ReentrantLock;
@@ -207,70 +197,6 @@ public class MainActivityController {
             // signed 16-bit inputs.
             for (int i = 0; i < RECORDING_LENGTH; ++i) {
                 floatInputBuffer[i] = inputBuffer[i] / 32767.0f;
-            }
-
-
-            RequestQueue requestQueue = Volley.newRequestQueue(mainActivity);
-            String URL = "https://ara-sound-app.herokuapp.com/api";
-            final JSONObject jsonBody = new JSONObject();
-            try {
-                jsonBody.put("sound", new JSONArray(floatInputBuffer));
-
-                Log.v(LOG_TAG, jsonBody.toString());
-            } catch (JSONException e) {
-                Log.v(LOG_TAG, "can't convert array");
-                e.printStackTrace();
-
-            }
-            final String requestBody = jsonBody.toString();
-
-            StringRequest stringRequest = new StringRequest(Request.Method.POST, URL,new Response.Listener<String>() {
-
-                @Override
-                public void onResponse(String response) {
-                    //try {
-                    //JSONObject jsonResponse = new JSONObject(response);
-                    //Toast.makeText(MainActivity.this, jsonResponse.toString(), Toast.LENGTH_SHORT).show();
-                    Log.v(LOG_TAG, response);
-                    RESAULT_NUMBER +=1;
-                    Toast.makeText(mainActivity, RESAULT_NUMBER + " = "+ response, Toast.LENGTH_SHORT).show();
-//                    } catch (JSONException e) {
-//                        Log.v(LOG_TAG, "json responce exception");
-//                        e.printStackTrace();
-//                    }
-                }
-            }, new Response.ErrorListener() {
-                @Override
-                public void onErrorResponse(VolleyError error) {
-                    //Log.v(LOG_TAG, error.getMessage());
-                    Toast.makeText(mainActivity, "ERRPR :"+error.getMessage(), Toast.LENGTH_LONG).show();
-                    //if(LoginActivity.this.dialog.isShowing())LoginActivity.this.dialog.dismiss();
-                }
-            })
-            {
-
-                @Override
-                public String getBodyContentType() {
-                    return "application/json; charset=utf-8";
-                }
-
-//                @Override
-//                protected Map<String, String> getParams() throws AuthFailureError {
-//                    Map<String, String> map = new HashMap<String, String>();
-//                    map.put("username", username);
-//                    map.put("password", password);
-//                    return map;
-//                }
-
-                @Override
-                public byte[] getBody() throws AuthFailureError {
-                    try {
-                        return requestBody == null ? null : requestBody.getBytes("utf-8");
-                    } catch (UnsupportedEncodingException uee) {
-                        VolleyLog.wtf("Unsupported Encoding while trying to get the bytes of %s using %s", requestBody, "utf-8");
-                        return null;
-                    }
-                }
             };
 //            requestQueue.add(stringRequest);
 //            stopRecording();
