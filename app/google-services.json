@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "306479019907",
+    "firebase_url": "https://ara-sound-app.firebaseio.com",
+    "project_id": "ara-sound-app",
+    "storage_bucket": "ara-sound-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:306479019907:android:94b56bafd28bf177",
+        "android_client_info": {
+          "package_name": "info.ara_sound.firebasenotification"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "306479019907-1018n58amut8gn49cnn246uuqmfflvd7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5mdPNR12phv9m-W7x38bS7jwrjt2CFfE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

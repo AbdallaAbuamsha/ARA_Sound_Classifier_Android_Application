@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ARA_Sound_Classifier_Android_Application.iml" filepath="$PROJECT_DIR$/ARA_Sound_Classifier_Android_Application.iml" />
-      <module fileurl="file://C:\Users\Abdalla\Documents\ARA_Sound_Classifier_Android_Application\GraduationPorjectTemplate.iml" filepath="C:\Users\Abdalla\Documents\ARA_Sound_Classifier_Android_Application\GraduationPorjectTemplate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android.iml" filepath="$PROJECT_DIR$/android.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/waveform/waveform.iml" filepath="$PROJECT_DIR$/waveform/waveform.iml" />
     </modules>
